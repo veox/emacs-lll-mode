@@ -1,6 +1,7 @@
 ;;; lll-mode.el - Ethereum Low Level Language major mode
 ;;
-;; Copyright (C) 2014 Rob Myers <rob@robmyers.org>
+;; Copyright (C) 2018 Noel Maersk <veox veox pw>
+;; Copyright (C) 2014 Rob Myers <rob robmyers org>
 ;;
 ;; This program is free software: you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -32,7 +33,7 @@
 ;; FIXME: all opcodes
 
 (defconst lll-font-lock-keywords
-      '(("\\<\\(call\\|calldatacopy\\|calldataload\\|codecopy\\|create\\|for\\|if\\|mload\\|mstore\\|mstore8\\|return\\|sha3\\|sload\\|sstore\\|stop\\|suicide\\|swap\\|unless\\|when\\)\\>"
+      '(("\\<\\(call\\|calldatacopy\\|calldataload\\|codecopy\\|create\\|for\\|if\\|mload\\|mstore\\|mstore8\\|return\\|selfdestruct\\|sha3\\|sload\\|sstore\\|stop\\|suicide\\|swap\\|unless\\|when\\)\\>"
          . font-lock-keyword-face)
         ("\\<\\(asm\\|def\\|lit\\|lll\\|raw\\|seq\\)\\>"
          . font-lock-builtin-face)
@@ -59,7 +60,7 @@
   
 ;;;###autoload
 (define-derived-mode lll-mode lisp-mode "lll"
-  "Major mode for editing Ethereum Low Level Language programming language files.
+  "Major mode for editing Ethereum Low Level Language program files.
 \\{lll-mode-map}"
   :syntax-table lll-syntax-table
   (set (make-local-variable 'font-lock-defaults)
