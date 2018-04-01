@@ -33,7 +33,7 @@
 ;; FIXME: all opcodes
 
 (defconst lll-font-lock-keywords
-      '(("\\<\\(call\\|calldatacopy\\|calldataload\\|codecopy\\|create\\|for\\|if\\|mload\\|mstore\\|mstore8\\|return\\|selfdestruct\\|sha3\\|sload\\|sstore\\|stop\\|suicide\\|swap\\|unless\\|when\\)\\>"
+      '(("\\<\\(call\\|calldatacopy\\|calldataload\\|codecopy\\|create\\|for\\|if\\|mload\\|mstore\\|mstore8\\|return\\|revert\\|selfdestruct\\|sha3\\|sload\\|sstore\\|stop\\|suicide\\|swap\\|unless\\|until\\|when\\|while\\)\\>"
          . font-lock-keyword-face)
         ("\\<\\(asm\\|def\\|lit\\|lll\\|raw\\|seq\\)\\>"
          . font-lock-builtin-face)
